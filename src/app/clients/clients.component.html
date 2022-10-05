@@ -2,6 +2,9 @@
     <div class="card-header text-primary">Header</div>
     <div class="card-body">
         <h5 class="card-title">Clients list</h5>
+        <div class="my-2 text-left">
+            <button type="button" class="btn btn-rounded btn-primary" [routerLink]="['/clients/form']">Añadir cliente</button>
+        </div>
         <table class="table table-bordered table-striped">
             <thead>
                 <th>ID</th>
@@ -17,6 +20,9 @@
                     <td>{{client.surname}}</td>
                     <td>{{client.email}}</td>
                     <td>{{client.createAt}}</td>
+                    <td>
+                        <button class="btn btn-primary" type="button" [routerLink]="['/clients/form', client.id]">Editar</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
